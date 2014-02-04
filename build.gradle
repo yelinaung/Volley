@@ -2,7 +2,7 @@ apply plugin: 'android-library'
 
 android {
     compileSdkVersion 17
-    buildToolsVersion = '19.0.1'
+    buildToolsVersion '19.0.1'
 
     sourceSets {
         defaultConfig {
@@ -18,6 +18,10 @@ android {
             java.srcDirs         = ['src']
             manifest.srcFile 'AndroidManifest.xml'
 
+        }
+
+        lintOptions {
+            abortOnError false
         }
 
         instrumentTest {
